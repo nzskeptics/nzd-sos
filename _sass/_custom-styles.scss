@@ -1,0 +1,37 @@
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+body.vw-100 {
+	width: auto !important;
+}
+
+h1 {
+	@extend .fs-1;
+	font-family: "Bebas Neue", sans-serif;
+}
+
+h2 {
+	@extend .mt-5;
+	@extend .text-center;
+	@extend .fs-2;
+}
+
+.alert-orange {
+	@extend .my-4;
+	@extend .text-light;
+	@extend .fs-2;
+	background-color: #FD5C44;
+}
+
+.btn-black {
+	@extend .btn-outline-dark;
+	@extend .rounded-1;
+	@extend .border-5;
+
+}
+
+.btn-green {
+	@extend .text-light;
+	background-color: rgb(0, 55, 22);
+}
