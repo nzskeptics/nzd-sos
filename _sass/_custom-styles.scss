@@ -42,6 +42,11 @@ h2 {
 	@extend .fs-4;
 }
 
+.alert-shadow a {
+	@extend .text-decoration-none;
+	@extend .text-reset;
+}
+
 .btn-black {
 	@extend .fs-3;
 	@extend .px-4;
