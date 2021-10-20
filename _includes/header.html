@@ -4,7 +4,7 @@
 	{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
 	<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 		<div class="container">
-			<h1 class="fs-1"><a class="navbar-brand fs-1" href="{{ '/' | relative_url }}" style="font-family: 'Bebas Neue', sans-serif">NZD<span style="color: red !important">-</span><span  style="color: grey !important">SOS</span></a></h1>
+			<h1><a class="navbar-brand" style="font-size: 56px" href="{{ '/' | relative_url }}">NZD<span style="color: red !important">-</span><span>SOS</span></a></h1>
 			{%- if titles_size > 0 -%}
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

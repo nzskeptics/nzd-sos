@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 body {
 	font-family: "Open Sans", Arial, sans-serif;
+	color: #666;
+	font-size: 14px;
 }
 
 body.vw-100 {
@@ -9,29 +13,52 @@ body.vw-100 {
 h1 {
 	@extend .fs-1;
 	font-family: "Bebas Neue", sans-serif;
+	color: #221f1f;
+}
+
+h1 span {
+	color: #8b8b8b !important;
 }
 
 h2 {
 	@extend .mt-5;
 	@extend .text-center;
-	@extend .fs-2;
+	color: #333333;
 }
 
 .alert-orange {
+	@extend .text-center;
+	@extend .fw-normal;
 	@extend .my-4;
+	@extend .py-1;
 	@extend .text-light;
 	@extend .fs-2;
 	background-color: #FD5C44;
 }
 
+.alert-shadow {
+	@extend .my-4;
+	@extend .shadow;
+	@extend .fs-4;
+}
+
 .btn-black {
+	@extend .fs-3;
+	@extend .px-4;
+	@extend .my-2;
 	@extend .btn-outline-dark;
 	@extend .rounded-1;
 	@extend .border-5;
-
+	color: #0f3716;
+	border-color: #0f3716;
 }
 
 .btn-green {
 	@extend .text-light;
+	@extend .fs-6;
+	@extend .w-100;
+	@extend .fw-light;
+	@extend .my-2;
+	@extend .p-3;
 	background-color: rgb(0, 55, 22);
 }
