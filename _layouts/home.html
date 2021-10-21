@@ -9,10 +9,10 @@ layout: default
 
 	{{ content }}
 
-	<h2>New Zealand Doctors called <select class="border-none" style="border-width: 0; color: red" ><option>Sarah</option><option>David</option><option>Andrew</option></select> Speaking Out with Science</h2>
+	<h2>New Zealand Doctors called <span style="color: red">{% raw %}{{name}}{% endraw %}</span> Speaking Out with Science</h2>
 
 	<div class="alert alert-orange" role="alert">
-		There are more doctors named Sarah who support vaccination than all the doctors who have signed the NZDSOS Declaration.
+		There are more doctors named {% raw %}{{name}}{% endraw %} who support vaccination than all the doctors who have signed the NZDSOS Declaration.
 	</div>
 
 
@@ -21,14 +21,14 @@ layout: default
 				<div class="col-9">
 					<div class="text-center">
 						<a role="button" class="btn btn-black" href="https://www.surveymonkey.com/r/DRSUV-2" target="_blank">Sign the Declaration</a>
-						<p class="fs-4 fw-light mb-1">Over 94 <a href="#" class="text-reset">Sarahs</a> and counting</p>
+						<p class="fs-4 fw-light mb-1">Over 94 <a href="#" class="text-reset">{% raw %}{{name}}{% endraw %}s</a> and counting</p>
 						<p>Reminding the public of their responsibility. Standing up for our safety, those of our families, our patients and the general public. NZ Doctors please check below to see how you can add your name to the list.</p>
 
 						<a role="button" class="btn btn-black" href="https://www.surveymonkey.com/r/DRSUV-2" target="_blank">New Zealand Doctors Click Here To Sign</a>
 
 						<h2>Who We Are and a Call To Action</h2>
 						<div class="alert alert-shadow" role="alert"><a href="https://www.doctors-stand-up-for-vaccination.com/" target="_blank">Doctors Stand Up For Vaccination</a></div>
-						<div class="alert alert-shadow" role="alert"><a href="https://skeptics.nz" target="_blank">The NZ Skeptics</a></div>
+						<div class="alert alert-shadow" role="alert"><a href="https://skeptics.nz" target="_blank">NZ Skeptics</a></div>
 					</div>
 				</div>
 			<div class="col mt-5">
