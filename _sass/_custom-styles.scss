@@ -26,6 +26,12 @@ h2 {
 	color: #333333;
 }
 
+h3 {
+	@extend .fw-bold;
+	@extend .mt-5;
+	color: #333333;
+}
+
 .alert-orange {
 	@extend .text-center;
 	@extend .fw-normal;

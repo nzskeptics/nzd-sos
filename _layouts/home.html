@@ -12,16 +12,15 @@ layout: default
 	<h2>New Zealand Doctors called <span style="color: red">{% raw %}{{name}}{% endraw %}</span> Speaking Out with Science</h2>
 
 	<div class="alert alert-orange" role="alert">
-		There are more doctors named {% raw %}{{name}}{% endraw %} who support vaccination than all the doctors who have signed the NZDSOS Declaration.
+		There are more doctors named {% raw %}{{name}}{% endraw %} who support vaccination than all the doctors who have signed the NZDSOS anti-vaccine Declaration.
 	</div>
-
 
 	<div class="container">
 		<div class="row">
 				<div class="col-9">
 					<div class="text-center">
 						<a role="button" class="btn btn-black" href="https://www.surveymonkey.com/r/DRSUV-2" target="_blank">Sign the Declaration</a>
-						<p class="fs-4 fw-light mb-1">Over 94 <a href="#" class="text-reset">{% raw %}{{name}}{% endraw %}s</a> and counting</p>
+						<p class="fs-4 fw-light mb-1">Over {% raw %}{{Math.floor(95 / 10) * 10}}{% endraw %} <a href="#" class="text-reset">{% raw %}{{name}}{% endraw %}s</a> and counting</p>
 						<p>Reminding the public of their responsibility. Standing up for our safety, those of our families, our patients and the general public. NZ Doctors please check below to see how you can add your name to the list.</p>
 
 						<a role="button" class="btn btn-black" href="https://www.surveymonkey.com/r/DRSUV-2" target="_blank">New Zealand Doctors Click Here To Sign</a>
@@ -31,6 +30,16 @@ layout: default
 						<div class="alert alert-shadow" role="alert"><a href="https://skeptics.nz" target="_blank">NZ Skeptics</a></div>
 					</div>
 					<p>The Doctors Stand Up For Vaccination group contains Public Health physicians, GPs, Intensive Care physicians, Urgent Care, Respiratory and Infectious Disease physicians, Paediatricians, General physicians, Emergency Medicine physicians, obstetricians, gynaecologists, surgeons and more.</p>
+					<h3>Background</h3>
+					<p>The following letter was written and began to be circulated to the doctors of Aotearoa New Zealand to be signed to show support of vaccination against COVID-19</p>
+					<h3>The letter to the people of Aotearoa New Zealand</h3>
+					<p>This letter is written on behalf of the undersigned doctors of Aotearoa New Zealand.</p>
+					<p>We wish to present a united and evidence-based voice to the people of Aotearoa New Zealand in support of vaccination against COVID-19 for all eligible New Zealanders. Our group contains Public Health physicians, GPs, Intensive Care physicians, Urgent Care, Respiratory and Infectious Disease physicians, Paediatricians, General physicians, Emergency Medicine physicians, obstetricians, gynaecologists, surgeons and more.</p>
+					<p>It is a difficult time for our country, with the Delta variant of COVID-19 currently in our community. We would like to thank the people of Aotearoa New Zealand for the hard work they have done to keep our shores largely free from COVID-19. There is a great deal of misinformation that circulates regarding COVID-19, and sometimes it can be hard to know where to look for medically sound and approved advice. We have compiled a FAQ Document that supports this letter, to answer some questions that we hear on a frequent basis.</p>
+					<p>We wish, as a group, to speak directly to the people of Aotearoa New Zealand. We overwhelmingly support vaccination against COVID-19 and other public health measures such as mask use in public areas, physical distancing and hand hygiene. These measures are not just an individual choice: when we undertake these measures, we do so for our whānau, friends, work colleagues and the entire country. By following this advice the medical community and the general public will work as a team to ensure our country is safe.</p>
+					<p class="fs-4 text-center lh-lg">Kia kaha Aotearoa: we will get through this together.</p>
+					<p>{% raw %}{{names[name].names}}{% endraw %}</p>
+
 				</div>
 			<div class="col mt-5">
 				<a type="button" class="btn btn-green" href="https://www.unicef.org.nz/appeal/covax" target="_blank">Donate to UNICEF</a>
