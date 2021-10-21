@@ -26,7 +26,7 @@
 					<li class="nav-item"><a class="nav-link" href="https://interactives.stuff.co.nz/2021/10/doctors-for-covid-vaccination/" target="_blank">Letters & Press</a></li>
 					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/our-doctors/" target="_blank">Who We Are</a></li>
 					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/contact/" target="_blank">Contact</a></li>
-					<li class="nav-item"><select v-model="name" class="fs-5" style="margin-left: 1em !important"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select></li>
+					<li class="nav-item"><select v-model="name" class="fs-5" style="margin-left: 1em !important" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select></li>
 				</ul>
 			</div>
 			{%- endif -%}
