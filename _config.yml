@@ -9,9 +9,9 @@ timezone: Pacific/Auckland
 author:
   name: Mark Honeychurch
   email: mark@honeychurch.org
-bootstrap:
-  header_pages:
-    - index.md
+#bootstrap:
+#  header_pages:
+#    - index.md
 plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
