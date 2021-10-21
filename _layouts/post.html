@@ -30,7 +30,5 @@ layout: default
 		{{ content }}
 	</div>
 
-	<img alt="" class="img-thumbnail rounded float-lg-end shadow" style="max-height: 40vh" src="{% if page.image %}{{ page.image | relative_url }}{% else %}{{ page.episode | prepend: '/assets/img/episodes/' | append: '.jpg' | relative_url }}{% endif %}">
-
 	<a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
