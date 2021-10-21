@@ -10,8 +10,13 @@ body.vw-100 {
 	width: auto !important;
 }
 
+main.page-content {
+	@extend .py-3;
+}
+
 h1 {
 	@extend .fs-1;
+	@extend .mb-5;
 	font-family: "Bebas Neue", sans-serif;
 	color: #221f1f;
 }
@@ -32,10 +37,14 @@ h3 {
 	color: #333333;
 }
 
+.container {
+	max-width: 1080px;
+}
+
 .alert-orange {
 	@extend .text-center;
 	@extend .fw-normal;
-	@extend .my-4;
+	@extend .my-5;
 	@extend .py-1;
 	@extend .text-light;
 	@extend .fs-2;
