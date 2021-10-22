@@ -4,21 +4,14 @@ image: /assets/img/social.jpg
 ---
 
 <div class="home">
-	<!--{%- if page.title -%}
-		<h1 class="page-heading py-3">{{ page.title }}</h1>
-	{%- endif -%}-->
-
-	{{ content }}
-
-	<h2>New Zealand Doctors called <span class="fw-bold" style="color: red">{% raw %}{{name}}{% endraw %}</span> Speaking Out with Science</h2>
-
+	<h2>New Zealand Doctors called <select :style="{width: name && $refs.name?.clientWidth || 170 + 'px'}" class="text-center border-0" style="color: red" v-model="name" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select> Speaking Out with Science</h2>
 	<div class="alert alert-orange" role="alert">
-		There are more doctors named {% raw %}{{name}}{% endraw %} who support vaccination than there are doctors who have signed the NZDSOS Declaration
+		There are more doctors named <span ref="name">{% raw %}{{name}}{% endraw %}</span> who support vaccination than there are doctors who have signed the NZDSOS Declaration
 	</div>
 
 	<div class="container">
 		<div class="row">
-				<div class="col-9">
+				<div class="col col-sm-9">
 					<div class="text-center">
 						<a role="button" class="btn btn-black" href="https://www.doctors-stand-up-for-vaccination.com/the-letter/" target="_blank">See the Declaration</a>
 						<p class="fs-4 fw-light mb-1">Over {% raw %}{{Math.floor((names[name].number - 1) / 10) * 10}}{% endraw %} <a href="https://d6scj24zvfbbo.cloudfront.net/9148d638432a00e29f6b02358445af92/200000069-776e9776eb/19.10.21-DRSUV-1.pdf" target="_blank" class="text-reset text-decoration-underline">{% raw %}{{names[name].plural}}{% endraw %}</a> and counting</p>
