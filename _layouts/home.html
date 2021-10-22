@@ -1,12 +1,11 @@
 ---
 layout: default
-image: /assets/img/social.jpg
 ---
 
 <div class="home">
-	<h2>New Zealand Doctors called <select :style="{width: name && $refs.name?.clientWidth || 170 + 'px'}" class="text-center border-0" style="color: red" v-model="name" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select> Speaking Out with Science</h2>
+	<h2>New Zealand Doctors called <select :style="{width: width + 'px'}" class="text-center border-0" style="color: red" v-model="name" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select> Speaking Out with Science</h2>
 	<div class="alert alert-orange" role="alert">
-		There are more doctors named <span ref="name">{% raw %}{{name}}{% endraw %}</span> who support vaccination than there are doctors who have signed the NZDSOS Declaration
+		There are more doctors named <span ref="name" class="d-inline-block">{% raw %}{{name}}{% endraw %}</span> who support vaccination than there are doctors who have signed the NZDSOS Declaration
 	</div>
 
 	<div class="container">
