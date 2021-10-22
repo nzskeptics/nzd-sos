@@ -4,9 +4,10 @@ const name = names[location.hash.substr(1)] ? location.hash.substr(1) : 'Sarah';
 createApp({
 	name,
 	names,
-	width: 135,
+	width: 110,
 	async change() {
-		location = '#' + name;
+
+		window.location = '#' + this.name;
 		this.width = this.$refs.name.clientWidth + 20;
 	},
 }).mount();
