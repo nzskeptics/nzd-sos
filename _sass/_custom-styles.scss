@@ -23,7 +23,11 @@ main.page-content {
 	color:#2EA3F2 !important;
 }
 
-select:focus{
+select {
+	background-color: inherit;
+}
+
+select:focus {
 	border-color: #ffffff;
 	outline: none;
 }
