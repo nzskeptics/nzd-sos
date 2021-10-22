@@ -1,7 +1,7 @@
 title: NZD-SOS
-subtitle: New Zealand Doctors Speaking Out with Science
+tagline: New Zealand Doctors Speaking Out with Science
 summary: This site shows just how many doctors have made their support of vaccination public, through the signing of an open letter
-description: Despite what the NZDSOS website tells you, very few doctors have chosen to take an anti-vaccine stance here in New Zealand
+description: Despite what the NZDSOS website tells you, very few doctors have chosen to take an anti-vaccine stance in New Zealand
 url: https://nzd-sos.com
 permalink: /:title
 remote_theme: jonaharagon/jekyll-bootstrap-theme
