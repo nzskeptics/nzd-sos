@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home" @mounted="location.search && location.replace(location.href.replace(/\?.+/, location.hash ? location.hash : ''))">
 	<h2>New Zealand Doctors called <select :style="{width: width + 'px'}" class="text-center border-0" style="color: red" v-model="name" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select> Speaking Out with Science</h2>
 	<div class="alert alert-orange" role="alert">
 		There are more doctors named <span ref="name" class="d-inline-block">{% raw %}{{name}}{% endraw %}</span> who support vaccination than there are doctors who have signed the NZDSOS Declaration
