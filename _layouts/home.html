@@ -3,18 +3,19 @@ layout: default
 ---
 
 <div class="home" @mounted="change">
-	{%- include intro.html -%}
-	<div class="container">
+	{%- include title.html -%}
+	<div class="container mt-5">
 		<div class="row">
 			<div class="col-12 col-lg-9">
 				{%- include sign.html -%}
-				<hr />
+				<hr class="my-4" />
 				{%- include statement.html -%}
 				{%- include professions.html -%}
-				{%- include who.html -%}
-				{%- include background.html -%}
 				{%- include letter.html -%}
-				{%- include subscribe.html -%}
+				<hr class="mt-5" />
+				{%- include quote.html -%}
+				{%- include warning.html -%}
+				<hr />
 			</div>
 			<div class="col mt-5 border-end pr-4">
 				{%- include buttons.html -%}
