@@ -15,6 +15,11 @@ a {
 	color: #ad332e;
 }
 
+hr {
+	color: #000000;
+	height: 2px;
+}
+
 main.page-content {
 	@extend .py-3;
 }
@@ -55,6 +60,13 @@ h3 {
 	@extend .fw-bold;
 	@extend .mt-5;
 	color: #333333;
+}
+
+h4 {
+	@extend .text-center;
+	@extend .mt-2;
+	@extend .fw-bold;
+	color: #000000;
 }
 
 .container {
@@ -104,6 +116,7 @@ h3 {
 }
 
 .btn-green {
+	@extend .text-center;
 	@extend .text-light;
 	@extend .fs-6;
 	@extend .w-100;

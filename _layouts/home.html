@@ -3,69 +3,26 @@ layout: default
 ---
 
 <div class="home" @mounted="change">
-	<h2>New Zealand Doctors called <select :style="{width: width + 'px'}" class="text-center border-0" style="color: red" v-model="name" @change="change"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select> Speaking Out with Science</h2>
-	<div class="alert alert-orange" role="alert">
-		There are more doctors named <span ref="name" class="d-inline-block">{% raw %}{{name}}{% endraw %}</span> who support vaccination than there are doctors who have signed the NZDSOS Declaration
-	</div>
-
+	{%- include intro.html -%}
 	<div class="container">
 		<div class="row">
-				<div class="col-12 col-lg-9">
-					<div class="text-center">
-						<a role="button" class="btn btn-black" href="https://www.doctors-stand-up-for-vaccination.com/the-letter/" target="_blank">See the Letter</a>
-						<p class="fs-4 fw-light mb-1">Over {% raw %}{{Math.floor((names[name].number - 1) / 10) * 10}}{% endraw %} <a href="https://d6scj24zvfbbo.cloudfront.net/9148d638432a00e29f6b02358445af92/200000069-776e9776eb/19.10.21-DRSUV-1.pdf" target="_blank" class="text-reset text-decoration-underline">{% raw %}{{names[name].plural}}{% endraw %}</a> and counting</p>
-						<p>{% raw %}{{names[name].number}}{% endraw %} doctors called {% raw %}{{name}}{% endraw %} (and 6,609 doctors overall), have signed the Doctors Stand Up For Vaccination open letter in support of COVID vaccination. This is compared to just 56 doctors who have signed the NZDSOS declaration that seeks to cast doubt on the efficacy and safety of the Pfizer COVID-19 vaccine.</p>
-
-						<a role="button" class="btn btn-black" href="https://www.surveymonkey.com/r/DRSUV-2" target="_blank">New Zealand Doctors Click Here To Sign</a>
-						<a role="button" class="btn btn-black" href="https://docs.google.com/forms/d/e/1FAIpQLSdk58m6ZAmWdD3oC0lGsubpLOavLkJC_gYL7qPaiGqzSbH4cA/viewform" target="_blank">New Zealand Nurses Click Here To Sign</a>
-						<!--<a role="button" class="btn btn-black" href="https://docs.google.com/forms/d/1Uwqh_AVeE6EiIgjf-Uu_JNz-5oTsBH5i8-Dzd3-inGk/viewform?edit_requested=true" target="_blank">New Zealand Pharmacists Click Here To Sign</a>-->
-
-						<h2>Who We Are and a Call To Action</h2>
-						<div class="alert alert-shadow" role="alert"><a href="https://www.doctors-stand-up-for-vaccination.com/" target="_blank">Doctors Stand Up For Vaccination</a></div>
-						<div class="alert alert-shadow" role="alert"><a href="https://skeptics.nz" target="_blank">NZ Skeptics</a></div>
-					</div>
-					<p class="mt-5">The Doctors Stand Up For Vaccination group contains Public Health physicians, GPs, Intensive Care physicians, Urgent Care, Respiratory and Infectious Disease physicians, Paediatricians, General physicians, Emergency Medicine physicians, obstetricians, gynaecologists, surgeons and more. The NZ Skeptics are an evidence-based, pro-science and pro-vaccine organisation who are fed up with groups like Voices for Freedom spreading dangerous misinformation.</p>
-					<h3>Background</h3>
-					<p>Yes, this website looks bad. That's because it's a copy of the Voices for Freedom site, nzdsos.com, which attempts to sow doubt about the COVID vaccine with an open letter signed by 56 doctors. However, unlike the Voices for Freedom website, this one doesn't spread misinformation, doesn't try to scare people, and isn't going to blast you with requests for money or push you to purchase our branded T-shirts and tote bags.</p>
-					<p>Instead, we've filtered the list of over six and a half thousand doctors who have signed a letter in support of vaccination, and found the most popular names - names where more doctors with that name have signed the letter, than all of the doctors who have signed the NZDSOS anti-vaccine declaration. The links on this site all point to reputable sources of information, and of course the credit for putting together the list of doctors goes to the amazing Doctors Stand Up For Vaccination group.</p>
-					<p>This site was inspired by <a href="https://en.wikipedia.org/wiki/Project_Steve" target="_blank">Project Steve</a>, an effort in the US in the early 2000s to counter a list of creationist scientists (who believe that god, not evolution, created life). The National Center for Science Education countered the creationist list by creating their own list of scientists called Steve who supported evolution, and their list far outnumbered the original creationist list.</p>
-					<p>The following letter was written and began to be circulated to the doctors of Aotearoa New Zealand to be signed to show support of vaccination against COVID-19. The letter was published with 6535 signatures verified against the medical register and published in <a href="https://interactives.stuff.co.nz/2021/10/doctors-for-covid-vaccination/" target="_blank">Stuff</a> on Super Saturday.</p>
-					<p>The group will keep the list updated weekly. The letter is accompanied by a <a href="https://www.doctors-stand-up-for-vaccination.com/about-us/" target="_blank">Frequently Asked Questions</a> document that helps answer commonly asked questions about the vaccination. You can find the FAQ document <a href="https://www.doctors-stand-up-for-vaccination.com/about-us/" target="_blank">here</a>.</p>
-					<h3>The letter to the people of Aotearoa New Zealand</h3>
-					<p>This letter is written on behalf of the undersigned doctors of Aotearoa New Zealand.</p>
-					<p>We wish to present a united and evidence-based voice to the people of Aotearoa New Zealand in support of vaccination against COVID-19 for all eligible New Zealanders. Our group contains Public Health physicians, GPs, Intensive Care physicians, Urgent Care, Respiratory and Infectious Disease physicians, Paediatricians, General physicians, Emergency Medicine physicians, obstetricians, gynaecologists, surgeons and more.</p>
-					<p>It is a difficult time for our country, with the Delta variant of COVID-19 currently in our community. We would like to thank the people of Aotearoa New Zealand for the hard work they have done to keep our shores largely free from COVID-19. There is a great deal of misinformation that circulates regarding COVID-19, and sometimes it can be hard to know where to look for medically sound and approved advice. We have compiled a FAQ Document that supports this letter, to answer some questions that we hear on a frequent basis.</p>
-					<p>We wish, as a group, to speak directly to the people of Aotearoa New Zealand. We overwhelmingly support vaccination against COVID-19 and other public health measures such as mask use in public areas, physical distancing and hand hygiene. These measures are not just an individual choice: when we undertake these measures, we do so for our whānau, friends, work colleagues and the entire country. By following this advice the medical community and the general public will work as a team to ensure our country is safe.</p>
-					<div class="text-center">
-						<div class="alert alert-shadow d-inline-block px-0" role="alert"><a class="mx-0 px-0" href="https://www.doctors-stand-up-for-vaccination.com/about-us/" target="_blank">Doctors Stand Up For Vaccination Frequently Asked Questions</a></div>
-					</div>
-					<p class="fs-4 text-center lh-lg pb-3">Kia kaha Aotearoa: we will get through this together.</p>
-					<p class="mx-5">{% raw %}{{names[name].names}}{% endraw %}</p>
-					<div class="text-center mb-5">
-						<a role="button" class="btn btn-black" href="https://skeptics.nz" target="_blank">Subscribe to our Newsletter</a>
-					</div>
-				</div>
+			<div class="col-12 col-lg-9">
+				{%- include sign.html -%}
+				<hr />
+				{%- include statement.html -%}
+				{%- include professions.html -%}
+				{%- include who.html -%}
+				{%- include background.html -%}
+				{%- include letter.html -%}
+				{%- include subscribe.html -%}
+			</div>
 			<div class="col mt-5 border-end pr-4">
-				<a type="button" class="btn btn-green" href="https://www.unicef.org.nz/appeal/covax" target="_blank">Donate to UNICEF</a>
-				<a type="button" class="btn btn-green" href="https://skeptics.nz" target="_blank">Subscribe to our Newsletter</a>
-				<a role="button" class="btn btn-green" href="https://covid19.govt.nz/about-this-site/contact-and-support/" target="_blank">United against Covid-19 Contact and Support</a>
-				<a type="button" class="btn btn-green" href="https://covid19.govt.nz/iwi-and-communities/support-your-community/" target="_blank">Community - Support Groups</a>
-				<p class="my-5 text-center"><em>Doctors Stand Up For Vaccination contains Public Health physicians, GPs, Intensive Care physicians, Urgent Care, Respiratory and Infectious Disease physicians, Paediatricians, General physicians, Emergency Medicine physicians, obstetricians, gynaecologists, surgeons and more.</em></p>
-				<div class="alert alert-gray" role="alert">
-					<p>Do you have any idea how hard it is to make a website look this ugly?<small>October 22, 2021</small></p>
-					<p>The letter is published with 6535 signatures<small>October 16, 2021</small></p>
-					<p>The letter has received > 5000 signatures<small>September 22, 2021</small></p>
-					<p>The letter has received > 4500 signatures<small>September 9, 2021</small></p>
-					<p>The letter has received > 3600 signatures<small>September 5, 2021</small></p>
-					<p>The letter has received > 2000 signatures<small>September 3, 2021</small></p>
-					<p>A letter has been written and circulated to the doctors of Aotearoa New Zealand<small>September 1, 2021</small></p>
-				</div>
-				<p class="mt-5 mb-4"><a class="text-reset fw-bolder" href="https://twitter.com/NZDRSUV" target="_blank">Twitter Channel</a></p>
-				<p class="mb-5 pb-3"><a class="text-reset fw-bolder" href="https://www.facebook.com/groups/nzskeptics" target="_blank">Help Channel for Conspiracy Victims</a></p>
-				<strong>Disclaimer</strong>
-				<p class="mb-5">Although it may look similar, this site is not to be confused with nzdsos.com - a website created by the anti-vaccine, anti-science group Voices for Freedom. Their website hosts a dangerous declaration that has been signed by a few doctors, some of whom appear to have fallen down a conspiracy rabbit hole or two. This website has been created by the NZ Skeptics to highlight just how few doctors have chosen to take an anti-vaccine stance here in New Zealand.</p>
+				{%- include buttons.html -%}
+				{%- include about.html -%}
+				{%- include news.html -%}
+				{%- include social.html -%}
+				{%- include disclaimer.html -%}
 		</div>
 		</div>
 	</div>
-
 </div>
