@@ -51,7 +51,6 @@ h1 span {
 
 h2 {
 	@extend .mt-5;
-	@extend .text-center;
 	font-weight: 400 !important;
 	font-size: 32px !important;
 	color: #333333;
@@ -71,7 +70,8 @@ h4 {
 }
 
 .container {
-	max-width: 1120px;
+	@extend .px-5;
+	max-width: 1280px;
 }
 
 .alert-orange {
