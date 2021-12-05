@@ -4,28 +4,6 @@ layout: default
 
 <div class="home" @mounted="change">
 	{%- include title.html -%}
-	<div class="container mt-5">
-		<div class="row">
-			<div class="col-12 col-lg-9">
-				{%- include sign.html -%}
-				<hr class="my-4" />
-				{%- include statement.html -%}
-				{%- include professions.html -%}
-				{%- include letter.html -%}
-			</div>
-			<div class="col mt-5 border-end pr-4">
-				{%- include buttons.html -%}
-				{%- include about.html -%}
-				{%- include news.html -%}
-				{%- include social.html -%}
-				{%- include disclaimer.html -%}
-			</div>
-		</div>
-	</div>
-	<hr class="mt-5" />
-	{%- include quote.html -%}
-	{%- include numbers.html -%}
-	{%- include warning.html -%}
-	<hr />
-	<h3 class="fw-normal text-center mb-5">Don’t be so open-minded that your brains fall out</h3>
+	{%- include text.html -%}
+	{%- include buttons.html -%}
 </div>

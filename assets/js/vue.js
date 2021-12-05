@@ -8,6 +8,6 @@ createApp({
 	async change() {
 		// window.location.search && window.location.replace(window.location.href.replace(/\?.+/, window.location.hash ? window.location.hash : ''));
 		window.location = '#' + this.name;
-		this.width = this.$refs.name.clientWidth + 20;
+		// this.width = this.$refs.name.clientWidth + 20;
 	},
 }).mount();
