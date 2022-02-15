@@ -1,36 +1,48 @@
-<header>
-	{%- assign default_paths = site.pages | map: "path" -%}
-	{%- assign page_paths = site.bootstrap.header_pages | default: default_paths -%}
-	{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-	<nav class="navbar navbar-expand-lg navbar-light fixed-top border-bottom" style="background-color: #ffffff;">
-		<div class="container">
-			<h1><a class="navbar-brand" style="font-size: 56px; color: #003716" href="{{ '/' | relative_url }}">NZD<span style="color: red !important">{% raw %}{{name.charAt(0)}}{% endraw %}</span><span>SOS</span></a></h1>
-			{%- if titles_size > 0 -%}
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder">
-					{%- for path in page_paths -%}
-					{%- assign my_page = site.pages | where: "path", path | first -%}
-					{%- if my_page.title -%}
-					<!--<li class="nav-item">
-						<a class="nav-link {% if page.url == my_page.url %} active" aria-current="page{%- endif -%}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-					</li>-->
-					{%- endif -%}
-					{%- endfor -%}
-					<li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ '/' | relative_url }}">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/the-letter/" target="_blank">Declaration</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/useful-reading/" target="_blank">Posts</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/support/" target="_blank">Alliances & Actions</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/about-us/" target="_blank">Resources & FAQ</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://interactives.stuff.co.nz/2021/10/doctors-for-covid-vaccination/" target="_blank">Letters and Press</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/our-doctors/" target="_blank">Who We Are</a></li>
-					<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/contact/" target="_blank">Contact</a></li>
-					<!--<li class="nav-item"><select v-model="name" class="fs-5 text-center" style="margin-left: 1em !important" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select></li>-->
-				</ul>
-			</div>
-			{%- endif -%}
+{%- assign default_paths = site.pages | map: "path" -%}
+{%- assign page_paths = site.bootstrap.header_pages | default: default_paths -%}
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+<header class="m-2 align-right pe-5">
+	<div class="d-flex justify-content-end pe-5">
+		<div class="input-group input-group-sm pe-3" style="max-width: 20em">
+			<input type="text" class="form-control" placeholder="Search ..." aria-label="Username" aria-describedby="search">
+			<span class="input-group-text" id="search"><i class="bi-search"></i></span>
 		</div>
-	</nav>
+		<i class="bi-telegram fs-5 m-2 pe-3" style="color: #003717"> Telegram</i>
+		<i class="bi-facebook fs-5 m-2 pe-3" style="color: #003717"> Facebook</i>
+		<a type="button" class="btn btn-green fs-5 p-0 m-0 fw-bold" style="padding: 0.5em !important" href="https://covid19.govt.nz/" target="_blank">Expert COVID Advice</a>
+	</div>
 </header>
+<nav class="navbar navbar-expand-lg navbar-light border-top border-bottom" style="background-color: #ffffff; border-color: #000 !important;"><!-- fixed-top -->
+	<div class="container">
+		<h1><a class="navbar-brand" style="font-size: 42px; color: #3B413E" href="{{ '/' | relative_url }}">NZD<span style="color: red !important">{% raw %}{{name.charAt(0)}}{% endraw %}</span><span style="color: #003717 !important">SOS</span></a></h1>
+		{%- if titles_size > 0 -%}
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder fs-6" style="color: #1a202c">
+				{%- for path in page_paths -%}
+				{%- assign my_page = site.pages | where: "path", path | first -%}
+				{%- if my_page.title -%}
+				<!--<li class="nav-item">
+					<a class="nav-link {% if page.url == my_page.url %} active" aria-current="page{%- endif -%}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+				</li>-->
+				{%- endif -%}
+				{%- endfor -%}
+				<li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ '/' | relative_url }}">Home</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/the-letter/" target="_blank">Declaration</a></li>
+				<li class="nav-item"><a class="nav-link" href="" target="_blank">About Us</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/useful-reading/" target="_blank">Posts</a></li>
+				<!--<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/support/" target="_blank">Alliances & Actions</a></li>-->
+				<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/about-us/" target="_blank">Resources</a></li>
+				<li class="nav-item"><a class="nav-link" href="" target="_blank">Newsletters</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://interactives.stuff.co.nz/2021/10/doctors-for-covid-vaccination/" target="_blank">In the News</a></li>
+				<!--<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/our-doctors/" target="_blank">Who We Are</a></li>-->
+				<li class="nav-item"><a class="nav-link" href="" target="_blank">Music & Laughter</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://www.doctors-stand-up-for-vaccination.com/contact/" target="_blank">Contact</a></li>
+				<!--<li class="nav-item"><select v-model="name" class="fs-5 text-center" style="margin-left: 1em !important" @change="location = '#' + name"><option v-for="details, name in names">{% raw %}{{name}}{% endraw %}</option></select></li>-->
+			</ul>
+		</div>
+		{%- endif -%}
+	</div>
+</nav>

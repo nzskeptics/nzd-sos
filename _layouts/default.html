@@ -3,12 +3,12 @@
 
 	{%- include head.html -%}
 
-	<body class="d-flex flex-column vw-100 vh-100" style="padding-top: 80px">
+	<body class="d-flex flex-column vw-100 vh-100">
 
 		{%- include header.html -%}
 
-		<main class="page-content py-5 flex-shrink-0" aria-label="Content">
-			<div class="container">
+		<main class="page-content flex-shrink-0" style="padding: 0 !important" aria-label="Content">
+			<div class="container" style="padding: 0 !important; ">
 			{{ content }}
 			</div>
 		</main>

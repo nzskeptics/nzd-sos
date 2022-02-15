@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans+Condensed:wght@700&display=swap');
 
 body {
 	font-family: "Open Sans", Arial, sans-serif;
-	color: #666;
+	/* color: #666; */
+	color: #2d3748;
 	font-size: 14px;
 }
 
@@ -25,9 +26,9 @@ main.page-content {
 	@extend .py-3;
 }
 
-.nav-link.active {
+/* .nav-link.active {
 	color:#2EA3F2 !important;
-}
+} */
 
 select {
 	background-color: inherit;
@@ -70,8 +71,8 @@ h4 {
 }
 
 .container {
-	@extend .px-5;
-	max-width: 1280px;
+	// @extend .px-5;
+	max-width: 100%;
 }
 
 .alert-orange {
@@ -120,7 +121,7 @@ h4 {
 	@extend .text-center;
 	@extend .text-light;
 	@extend .fs-6;
-	@extend .w-100;
+	// @extend .w-100;
 	@extend .fw-normal;
 	@extend .my-2;
 	@extend .p-3;
